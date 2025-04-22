@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>Mensajería Kafka</h2>
+  
+    <div class="input-container">
+      <input [(ngModel)]="nuevoMensaje" placeholder="Escribe un mensaje..." />
+      <button (click)="enviar()">Enviar</button>
+    </div>
+  
+    <h3>Mensajes recibidos:</h3>
+    <ul>
+      <li *ngFor="let mensaje of mensajes">{{ mensaje }}</li>
+    </ul>
+  
+    <button (click)="obtenerMensajes()">Actualizar</button>
+</div>
+
