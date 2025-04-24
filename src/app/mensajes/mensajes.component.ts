@@ -14,7 +14,10 @@ export class MensajesComponent {
   constructor(private mensajeService: MensajeService) {}
 
   enviar() {
-    this.mensajeService.enviarMensaje(this.nuevoMensaje).subscribe();
+    this.mensajeService.enviarMensaje(this.nuevoMensaje).subscribe(() => {
+      this.nuevoMensaje = '';
+      this.obtenerMensajes(); // recarga lista después de enviar
+    });
   }
 
   obtenerMensajes() {
