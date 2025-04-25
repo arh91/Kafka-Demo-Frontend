@@ -16,7 +16,7 @@ export class MensajesComponent {
   enviar() {
     this.mensajeService.enviarMensaje(this.nuevoMensaje).subscribe(() => {
       this.nuevoMensaje = '';
-      this.obtenerMensajes(); // recarga lista después de enviar
+      this.obtenerMensajes(); // recargamos lista después de enviar
     });
   }
 
